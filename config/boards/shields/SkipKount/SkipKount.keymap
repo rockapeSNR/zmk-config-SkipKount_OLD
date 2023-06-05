@@ -9,9 +9,9 @@
         default_layer {
             bindings = <
                 &kp A
-                &kp B 
-                &kp C 
-                &kp D 
+                &kp B
+                &kp C
+                &kp D
                 &mo 1
             >;
         };
