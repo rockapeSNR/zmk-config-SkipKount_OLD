@@ -1,4 +1,8 @@
+# SkipKount board configuration
+
+# Copyright (c) 2023 Spanky
+# SPDX-License-Identifier: MIT
+
 config BOARD_SKIPKOUNT
         bool "SkipKount"
         depends on SOC_NRF52840_QIAA
-        

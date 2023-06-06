@@ -1,8 +1,16 @@
+/*
+* Copyright (c) 2023 Spanky
+*
+* SPDX-License-Identifier: MIT
+*/
+
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
+#include <dt-bindings/zmk/gpio-direct.h>
 
 / {
-    model = "SkipKount"
+    model = "SkipKount";
+    compatible = "spanky,skipkount";
 
     chosen {
         zmk,kscan = &default_kscan;
