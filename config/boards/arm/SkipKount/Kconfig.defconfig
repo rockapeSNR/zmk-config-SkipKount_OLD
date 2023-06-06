@@ -1,6 +1,6 @@
-if SHIELD_SKIPKOUNT
+if BOARD_SKIPKOUNT
 
-config SHIELD
+config BOARD
         default "SkipKount"
 
 config ZMK_KEYBOARD_NAME
@@ -28,4 +28,4 @@ config ZMK_USB
 config ZMK_BATTERY_VOLTAGE_DIVIDER
         default y
 
-endif # SHIELD_SKIPKOUNT    
+endif # BOARD_SKIPKOUNT    

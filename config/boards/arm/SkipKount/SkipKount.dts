@@ -1,4 +1,6 @@
 / {
+    model = "SkipKount"
+    
     chosen {
         zmk,kscan = &default_kscan;
     };
