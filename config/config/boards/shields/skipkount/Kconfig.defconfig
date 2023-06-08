@@ -1,6 +1,0 @@
-if SHIELD_SKIPKOUNT
-
-config ZMK_KEYBOARD_NAME
-  default "SkipKount"
-
-endif
