@@ -1,0 +1,70 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+// Layers
+#define DEFAULT 0
+#define FN 1
+
+/ {  
+  keymap {
+    compatible = "zmk,keymap";
+
+    /* Default Layer
+     * .---------------------------.
+     * |  A | XIAO | CALC |  FN  |
+     * |------+------+------+------|
+     * |  B |   /  |   *  |   -  |
+     * |------+------+------+------|
+     * |  C |   8  |   9  |      |
+     * |------+------+------+   +  |
+     * |  D |   5  |   6  |      |
+     * |------+------+------+------|
+     * |  FN|   2  |   3  |   E  |
+     * |------+------+------|   N  |
+     * |      0      |   ,  |   T  |
+     * '---------------------------'
+     */
+
+    default_layer {
+      bindings = <
+        &kp A
+        &kp B
+        &kp C
+        &kp D
+        &mo FN
+      >;
+
+#     sensor-bindings = <
+#       &inc_dec_kp C_VOL_UP C_VOL_DN
+#     >;
+    }; 
+    
+    /* Function Layer
+     * .---------------------------.
+     * | BT-C  | XIAO |      |      |
+     * |------+------+------+------|
+     * | BT-0 |      |      | BOOT |
+     * |------+------+------+------|
+     * | Out USB |      |      | OUT  |
+     * |------+------+------+      |
+     * | Out BLE | BT-4 |      | USB  |
+     * |------+------+------+------|
+     * |      | BT-1 | BT-2 | OUT  |
+     * |------+------+------|      |
+     * |             |      | BLE  |
+     * '---------------------------'
+     */
+    
+    fn_layer {
+      bindings = <
+        &bt BT_CLR
+        &bt BT_SEL 0
+        &out OUT_USB
+        &out OUT_BLE
+        &trans
+      >;
+    };
+  };
+};
